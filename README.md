@@ -30,7 +30,7 @@ yarn deploy-local
 
 ## Subgraph graphql playground
 
-http://localhost:8000/subgraphs/name/metisio/approvals/graphql
+http://localhost:8000/subgraphs/name/mantle/approvals/graphql
 
 ```graphql
 query {
@@ -82,7 +82,7 @@ Open graph index node playground and input flowing graphl request
 
 ```graphql
 {
-  indexingStatusForCurrentVersion(subgraphName: "metisio/approvals") {
+  indexingStatusForCurrentVersion(subgraphName: "mantle/approvals") {
     synced
     health
     fatalError {

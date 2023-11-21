@@ -1,18 +1,18 @@
 {
-  "name": "metis-approvals-subgraph",
+  "name": "mantle-approvals-subgraph",
   "license": "MIT",
   "scripts": {
-    "codegen": "rm -rf src/generated && 0xgraph codegen -o src/generated",
+    "codegen": "rm -rf src/generated && graph codegen -o src/generated",
     "prebuild": "yarn codegen",
-    "build": "rm -rf build && 0xgraph build",
+    "build": "rm -rf build && graph build",
     "postinstall": "yarn build",
-    "create": "0xgraph deploy metisio/approvals",
-    "create-local": "0xgraph create --node http://localhost:8020/ metisio/approvals",
-    "remove-local": "0xgraph remove --node http://localhost:8020/ metisio/approvals",
-    "deploy-local": "0xgraph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 metisio/approvals"
+    "create": "graph deploy mantle/approvals",
+    "create-local": "graph create --node http://localhost:8020/ mantle/approvals",
+    "remove-local": "graph remove --node http://localhost:8020/ mantle/approvals",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 mantle/approvals"
   },
   "dependencies": {
-    "@0xgraph/cli": "0.0.5",
+    "@graphprotocol/graph-cli": "0.61.0",
     "@graphprotocol/graph-ts": "0.26.0"
   }
 }

@@ -1,17 +1,17 @@
-specVersion: 0.0.2
+specVersion: 0.0.4
 description: Token approve list
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum
     name: ERC20Approve
-    network: andromeda
+    network: mantle
     source:
       abi: ERC20
       startBlock: 0
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.5
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - Token
@@ -25,13 +25,13 @@ dataSources:
       file: ./src/ERC20.ts
   - kind: ethereum
     name: ERC721Approve
-    network: andromeda
+    network: mantle
     source:
       abi: ERC721
       startBlock: 0
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.5
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
         - Token
